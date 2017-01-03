@@ -1,6 +1,26 @@
 # RegExp
 常用正则表达式
 
+##正则表达式中的特殊字符
+
+* `^` 前缀匹配，匹配字符串必须在最开始
+```javascript
+/^A/.test('Ana');//=>true
+/^A/.test('anA');//=>false
+```
+
+* `$` 后缀匹配，匹配的字符串必须在最末尾
+```javascript
+/A$/.test('aaA');=>true
+/A$/.test('Aaa');=>false
+```
+
+* `^$` 完全匹配，匹配的字符串必须和给定的表达式完全一致
+```javascript
+/^AAA$/.test('AAA');//=>true
+/^AAA$/.test('AAAA');//=>false
+```
+
 ## 一些常用表达式
 > 金额验证(可以有两位小数): \d+(\.\d{0,2})?  
 > 手机号码验证: 1[34578]\d{9}  
